@@ -12,13 +12,13 @@ class ProductViewController: UIViewController {
 
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productImageView: UIImageView!
+    var productName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let labelText = "1937 Desk Phone"
         
-        productNameLabel.text = labelText
+        productNameLabel.text = productName
         productImageView.image = #imageLiteral(resourceName: "phone")
     }
 
