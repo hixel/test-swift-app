@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4O3-bo-8yd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone-fullscreen1" translatesAutoresizingMaskIntoConstraints="NO" id="4O3-bo-8yd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -33,9 +33,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUB-Eu-z8O">
-                                <rect key="frame" x="147" y="514" width="80" height="101"/>
+                                <rect key="frame" x="96" y="512" width="182" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="add-to-cart"/>
+                                <state key="normal" image="button-addtocart"/>
                                 <connections>
                                     <action selector="addToCartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bx7-QA-lWb"/>
                                 </connections>
@@ -56,16 +56,16 @@
         <scene sceneID="E1N-h1-QVu">
             <objects>
                 <tableViewController id="r1B-Uf-cui" customClass="ProductsTableViewController" customModule="TestSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="57" sectionHeaderHeight="18" sectionFooterHeight="18" id="ahE-PY-vQo">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="146" sectionHeaderHeight="18" sectionFooterHeight="18" id="ahE-PY-vQo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="57" id="Hkg-IE-I4G">
-                                <rect key="frame" x="0.0" y="56" width="375" height="57"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="146" id="Hkg-IE-I4G">
+                                <rect key="frame" x="0.0" y="56" width="375" height="146"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hkg-IE-I4G" id="dSC-hw-YSU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -190,10 +190,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add-to-cart" width="512" height="512"/>
-        <image name="header-contact" width="128" height="128"/>
-        <image name="icon-about-email" width="128" height="128"/>
-        <image name="icon-about-phone" width="128" height="128"/>
-        <image name="icon-about-website" width="128" height="128"/>
+        <image name="button-addtocart" width="158" height="41"/>
+        <image name="header-contact" width="375" height="125"/>
+        <image name="icon-about-email" width="34" height="34"/>
+        <image name="icon-about-phone" width="34" height="34"/>
+        <image name="icon-about-website" width="34" height="34"/>
+        <image name="phone-fullscreen1" width="375" height="667"/>
     </resources>
 </document>

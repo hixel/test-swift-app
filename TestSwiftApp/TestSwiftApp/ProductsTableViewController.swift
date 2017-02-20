@@ -10,19 +10,41 @@ import UIKit
 
 class ProductsTableViewController: UITableViewController {
 
-    var productNames: [String]?
+    var products: [Product]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        productNames = ["1907 Wall set", "1921 Dial Phone", "1937 Desk Set", "1984 Motorola Portable"]
+        let product1 = Product();
+        let product2 = Product();
+        let product3 = Product();
+        let product4 = Product();
+        
+        product1.name = "1907 Wall Set"
+        product1.productImage = "phone-fullscreen1"
+        product1.cellImage = "image-cell1"
+        
+        product2.name = "1921 Dial Phone"
+        product2.productImage = "phone-fullscreen2"
+        product2.cellImage = "image-cell2"
+        
+        product3.name = "1937 Desk Set"
+        product3.productImage = "phone-fullscreen3"
+        product3.cellImage = "image-cell3"
+        
+        product4.name = "1984 Motorola portable"
+        product4.productImage = "phone-fullscreen4"
+        product4.cellImage = "image-cell4"
+        
+        
+        products = [product1, product2, product3, product4]
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let pNames = productNames {
+        if let p = products {
             
-            return pNames.count
+            return p.count
         }
         
         return 0
@@ -32,14 +54,15 @@ class ProductsTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
         
-        let productName = productNames?[indexPath.row]
+        let product = products?[indexPath.row]
         
-        if let pName = productName {
+        if let p = product {
             
-            cell.textLabel?.text = pName
+            cell.textLabel?.text = p.name
+            if let i = p.cellImage {
+                cell.imageView?.image = UIImage(named: i)
+            }
         }
-        
-        cell.imageView?.image = UIImage(named: "icon-about-email")
         
         return cell
     }
@@ -53,10 +76,10 @@ class ProductsTableViewController: UITableViewController {
             guard let cell = sender as? UITableViewCell,
                 let indexPath = tableView.indexPath(for: cell) else {
                     
-                    return
+                return
             }
             
-            productVC?.productName = productNames?[indexPath.row]
+            productVC?.product = products?[indexPath.row]
         }
     }
 }
